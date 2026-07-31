@@ -35,6 +35,26 @@ The AI did not know my preferred email address, phone number, LinkedIn URL, or f
 I reviewed the files and remain responsible for their accuracy, wording, and submission.
 
 ---
+## 2026-07-31 — Phase 2 Workbook Specification
+
+**Tool:** ChatGPT (OpenAI)
+
+**Purpose:** Draft a technical specification for the FX hedging workbook before any Excel model was built.
+
+**Prompt summary:**
+"Create a complete Phase 2 specification for an Excel workbook that evaluates forward, money-market, and option hedges for a EUR 4,500,000 receivable due in one year. Use the required named ranges, workbook architecture, calculation flow, validation rules, and sensitivity analysis."
+
+**Initial AI output:**
+The first draft provided the overall workbook structure, input contract, and hedge descriptions.
+
+**Issue I identified:**
+The initial draft did not explicitly specify the required sensitivity range (0.95 × S0_in to 1.05 × S0_in in 1% increments) or clearly list the required output names and validation checks.
+
+**Revision made:**
+I edited the specification to add the required sensitivity design, named output summaries, covered interest parity validation, formula integrity checks, error checks, and explicit use of named ranges throughout the calculation flow.
+
+**Final responsibility:**
+I reviewed the specification, verified it matched the Stage 2 requirements, and remain responsible for the accuracy of the final document.
 
 ## Reusable Entry Template
 
