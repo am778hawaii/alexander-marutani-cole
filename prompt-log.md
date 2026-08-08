@@ -107,6 +107,24 @@ Using the course lab equations, the workbook and lab benchmark matched for forwa
 **Final responsibility:**  
 I reviewed the source choices, timestamps, assumptions, workbook outputs, and documented proxy before submission.
 
+## 2026-08-07 — Phase 5 Independent Analysis, Validation, and Recommendation
+**Tool: ChatGPT by OpenAI**
+**Independent-run prompt:**  
+“Using only the two attached documents, independently compute the complete FX hedge analysis for the stated receivable. Calculate the forward, three-step money-market hedge, put, call, and unhedged outcomes; evaluate them across the required sensitivity range; identify any ambiguities in the documents; and recommend a strategy. Show enough arithmetic that the results can be independently checked. Do not assume access to my Excel workbook.”
+Documents supplied to the independent run:
+Phase 2 FX hedging workbook specification.
+Phase 4 market-data memo.
+**Production-test result:**  
+The independent analysis reproduced the forward, money-market, put, call-overlay, and unhedged calculations. It recommended the forward because it locked approximately $5.284 million with no upfront option premium. It also identified that the call's role was not fully explained for an EUR receivable.
+**Human verification:**  
+I independently recomputed the forward proceeds, all three money-market steps, and the put outcome under a 5% EUR depreciation using named-range notation and calculator arithmetic. These results reconciled to the workbook.
+**Spec gap identified:**  
+The Phase 2 specification was mechanically clear enough to calculate a long EUR call overlay, but it did not clearly say that a call is not the conventional downside hedge for an EUR receivable. A future specification should label the put as the receivable option hedge and the call as a comparison instrument for the reversed/payable exposure.
+**Additional retrospective:**  
+The specification should also define a hierarchy for selecting a maturity-matched EUR interest rate and explicitly distinguish a live quoted forward from a CIP-implied forward.
+**Final recommendation:**  
+Hedge the EUR 4,500,000 one-year receivable with a one-year forward, subject to obtaining and checking an executable dealer quote before transaction.
+
 ## Reusable Entry Template
 
 ### YYYY-MM-DD — Stage or Task Name
