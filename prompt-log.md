@@ -92,6 +92,21 @@ I reviewed the generated workbook and audit results. The Phase 3 inputs
 are still indicative placeholders and will be replaced with sourced live
 market data in Phase 4.
 
+## 2026-08-07 — Phase 4 Live Market Data
+**Tool: ChatGPT by OpenAI**
+**Prompt used: ** 
+“Complete Phase 4 for my EUR 4,500,000 one-year FX receivable model. Retrieve current EURUSD spot and appropriate USD/EUR rates, document sources and timestamps, compute the one-year forward with covered interest parity if a live forward is unavailable, select near-spot option strikes, retain the scenario premiums, repopulate the Phase 3 workbook, rerun validation, and cross-check the outputs against the course FX Hedging Lab.”
+**Data-retrieval assistance:**  
+The AI located the ECB EURUSD reference rate for August 7, 2026, the latest published 1-year U.S. Treasury constant-maturity yield in FRED, and the ECB deposit facility rate. I reviewed the source dates and conventions before using them.
+**Human judgment / iteration:** 
+A same-day 1-year euro yield was not reliably retrievable through the available source. Rather than invent a value, I used the ECB deposit facility rate as a clearly labeled EUR reference-rate proxy and documented the limitation. I also used a CIP-implied forward rather than presenting it as a live dealer quote.
+**Workbook result:**  
+The live values flowed through the existing named ranges without structural formula changes. The forward/MM parity check, option continuity check, sensitivity row-count check, and sensitivity endpoint check all pass.
+**Lab cross-check:**  
+Using the course lab equations, the workbook and lab benchmark matched for forward proceeds, money-market proceeds, put proceeds at the live spot, and the CIP-implied forward, with zero calculated differences.
+**Final responsibility:**  
+I reviewed the source choices, timestamps, assumptions, workbook outputs, and documented proxy before submission.
+
 ## Reusable Entry Template
 
 ### YYYY-MM-DD — Stage or Task Name
