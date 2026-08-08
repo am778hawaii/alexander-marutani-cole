@@ -56,9 +56,9 @@ I edited the specification to add the required sensitivity design, named output 
 **Final responsibility:**
 I reviewed the specification, verified it matched the Stage 2 requirements, and remain responsible for the accuracy of the final document.
 
-2026-08-07 --- Phase 3 Workbook Generation and Audit
+## 2026-08-07 --- Phase 3 Workbook Generation and Audit
 Tool: ChatGPT by OpenAI
-Prompt used:  
+**Prompt used:**   
 "Generate a working workbook from my Phase 2 specification for the EUR
 4,500,000 one-year receivable. The workbook must contain all ten
 required named ranges, formulas instead of hard-coded calculated values,
@@ -67,7 +67,7 @@ put and call option analysis including USD premiums, a formula-driven
 ±5% sensitivity table in 1% steps with a comparison chart, and visible
 validation checks. Also audit the workbook against the specification and
 document at least three findings."
-AI output:  
+**AI output:**  
 The AI generated the Phase 3 Excel workbook, including the required
 tabs, named ranges, formulas, formatting conventions, sensitivity
 analysis, chart, and validation block.
@@ -76,18 +76,18 @@ During the audit, the forward-versus-money-market parity check returned
 `REVIEW`. The original indicative `F0_in` placeholder of 1.1242 was
 slightly inconsistent with the placeholder spot and interest rates and
 created an approximately $1,503 difference.
-Correction made:  
+**Correction made:**  
 I directed the model to make the indicative forward placeholder
 consistent with covered interest parity. `F0_in` was updated to
 1.1245340666, and the validation threshold was tightened. The parity
 difference then fell to approximately $0.00 and the workbook returned
 `PASS`.
-Additional checks:  
+**Additional checks:**  
 I verified the put payoff is continuous at the strike and includes the
 premium; the sensitivity table contains 11 formula-driven scenarios from
 95% to 105% of spot; all ten named ranges are present; and the workbook
 contains no obvious Excel error values.
-Final responsibility:  
+**Final responsibility:**  
 I reviewed the generated workbook and audit results. The Phase 3 inputs
 are still indicative placeholders and will be replaced with sourced live
 market data in Phase 4.
