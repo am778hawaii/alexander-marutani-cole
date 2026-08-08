@@ -13,4 +13,14 @@ This repository is a growing portfolio of my finance coursework, decision memos,
 **Career interests:** Financial advising, wealth management, investment analysis, and financial education.
 
 
-
+## FX Hedging Project — FIN 321
+This project develops and validates an FX risk-management model for a EUR 4.5 million receivable due in one year. The work progresses from executive exposure framing through model specification, AI-assisted workbook construction and audit, live-market-data population, independent validation, and a final hedge recommendation.
+Stage 1 — Hedge framing: `docs/decisions/2026-07-31-Marutani-Cole-eur-receivable-one-year-hedge-framing.md`
+Stage 2 — Model specification: `docs/specs/2026-07-31-Marutani-Cole-eur-receivable-one-year-spec.md`
+Stage 3 — Excel model: `models/builds/2026-08-07-Marutani-Cole-eur-receivable-one-year-model.xlsx`
+Stage 3 — Build audit: `analysis/2026-08-07-Marutani-Cole-build-audit.md`
+Stage 4 — Market data: `data/2026-08-07-Marutani-Cole-market-data.md`
+Stage 5 — Validation: `analysis/2026-08-07-Marutani-Cole-eur-receivable-one-year-validation.md`
+Stage 5 — Recommendation: `docs/decisions/2026-08-07-Marutani-Cole-eur-receivable-one-year-hedge-recommendation.md`
+Stage 5 — Independent LLM output: `analysis/2026-08-07-Marutani-Cole-eur-receivable-one-year-independent-llm-output.md`
+Final recommendation: hedge the EUR receivable with a one-year forward, subject to confirmation of an executable market quote. The model demonstrates the trade-off among forward 
